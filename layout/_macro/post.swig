@@ -155,16 +155,6 @@
                 </a>
               </span>
               <!--/noindex-->
-            {% elseif is_post() and theme.gentie_productKey %}
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a class="cloud-tie-join-count" href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
-                </a>
-              </span>
             {% elseif theme.changyan.enable and theme.changyan.appid and theme.changyan.appkey %}
               <span class="post-comments-count">
               <span class="post-meta-divider">|</span>
@@ -207,7 +197,9 @@
           {% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %}
             <div class="post-wordcount">
               {% if theme.post_wordcount.wordcount %}
-                <span class="post-meta-divider">|</span>
+                {% if not theme.post_wordcount.separated_meta %}
+                  <span class="post-meta-divider">|</span>
+                {% endif %}
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -338,6 +330,14 @@
       {% endif %}
 
       {% if not is_index %}
+      {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
+        <div class="post-widgets">
+        {% if theme.rating.enable %}
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        {% endif %}
+
         {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
           <div class="social-like">
             {% if theme.vkontakte_api.enable and theme.vkontakte_api.like %}
@@ -353,6 +353,8 @@
             {% endif %}
           </div>
         {% endif %}
+        </div>
+      {% endif %}
       {% endif %}
 
       {% if not is_index and (post.prev or post.next) %}
