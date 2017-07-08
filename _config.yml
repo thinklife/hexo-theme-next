@@ -50,7 +50,7 @@ menu:
   archives: /archives/
   tags: /tags/
   sitemap: /sitemap.xml
-  commonweal: /404.html
+  #commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -316,7 +316,7 @@ baidu_analytics: 9164ba92abdd8c94053ab08187ec9906
 
 # Disqus
 disqus:
-  enable: false
+  enable: true
   shortname:
   count: true
 
@@ -325,9 +325,9 @@ disqus:
 
 # changyan
 changyan:
-  enable: true
-  appid: cysIPcSPE
-  appkey: 3903c10a4365cf411415bc760a9066e1
+  enable: false
+  appid: cyt6osK9t
+  appkey: 1a1ad0163fd4d903a488aecb741225c5
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
