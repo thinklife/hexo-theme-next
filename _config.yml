@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "浮生一日"
+keywords: "加强自我认识，提升自我认识，学习知识变现， 学习流量变现"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -20,7 +20,7 @@ since: 2015
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: false
+copyright: true
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -36,7 +36,7 @@ seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -49,7 +49,7 @@ menu:
   #about: /about/
   archives: /archives/
   tags: /tags/
-  sitemap: /sitemap.xml
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -140,10 +140,10 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
-
-
+social:
+  GitHub: https://github.com/thinklife
+  Weixin: rushking2009
+  Envelope: 55269778@qq.com
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -156,7 +156,8 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
-
+  Weixin: weixin
+  Envelope: envelope
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -172,13 +173,13 @@ toc:
   number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
+  wrap: true
 
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
+creative_commons: by-nc-sa
 #creative_commons:
 
 
@@ -241,7 +242,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false
   created_at: true
   updated_at: false
   categories: true
@@ -249,23 +250,23 @@ post_meta:
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
-  item_text: true
+  item_text: false
   wordcount: true
-  min2read: false
-  separated_meta: true
+  min2read: true
+  separated_meta: false
 
 # Wechat Subscriber
-wechat_subscriber:
-  enabled: true
+#wechat_subscriber:
+  #enabled: true
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  qcode: /uploads/wechat-qcode-hackhook.jpg
-  description:  老婆+孩子=加油努力
+  #qcode: /uploads/wechat-qcode-hackhook.jpg
+  #description:  老婆+孩子=加油努力
 
 wechatpay: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_qrcode_wechatpay.jpg
 
 # iepple.desktopservices DSDontWriteNetworkStores trueclare license on posts
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -289,7 +290,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night eighties
+highlight_theme: night blue
 
 
 # ---------------------------------------------------------------
@@ -350,7 +351,7 @@ disqus:
 #add_this_id:
 
 # Share
-duoshuo_share: true
+duoshuo_share: false
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -428,15 +429,15 @@ busuanzi_count:
   # count values only if the other configs are false
   enable: false
   # custom uv span for the whole site
-  site_uv: true
+  site_uv: false
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: true
+  site_pv: false
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: true
+  page_pv: false
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -491,7 +492,7 @@ local_search:
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
-exturl: false
+exturl: true
 
 
 #! ---------------------------------------------------------------
@@ -503,7 +504,7 @@ exturl: false
 use_motion: true
 
 # Fancybox
-fancybox: true
+fancybox: false
 
 # Progress bar in the top during page loading.
 pace: false
