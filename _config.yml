@@ -161,7 +161,8 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_wechat_avatar.png
+#http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_wechat_avatar.png
+avatar: http://7wy48o.com1.z0.glb.clouddn.com/2017-07-27-IMG_4410.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -228,15 +229,15 @@ links:
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
+save_scroll: true
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
+  enable: false
   length: 150
 
 # Post meta display settings
