@@ -25,8 +25,31 @@
 </div>
 
 <div class="links-of-blogroll motion-element links-of-blogroll-block">
+  <div class="links-of-blogroll-title">
+    <h3 class="title" style="text-align:center;background-color: lightskyblue">推荐|学习用品</h3>
+  </div>
+  <ul class="links-of-blogroll-list">
+    <li class="links-of-blogroll-item">
+      <a href="https://s.click.taobao.com/43zwKdw" title="" class="fancybox" rel="gallery11">
+        <img src="http://7wy48o.com1.z0.glb.clouddn.com/2017-08-11-093848.jpg?imageView2/2/w/800" width="230px">
+      </a>
+    </li>
+  </ul>
+  <div class="links-of-blogroll-title">
+    <h3 class="title" style="text-align:center;background-color: lightskyblue">推荐|效率工具</h3>
+  </div>
+  <ul class="links-of-blogroll-list">
+    <li class="links-of-blogroll-item">
+      <a href="https://itunes.apple.com/cn/app/things-3/id904237743?l=en&mt=8" title="" class="fancybox" rel="gallery11">
+        <img src="http://7wy48o.com1.z0.glb.clouddn.com/2017-08-11-094806.jpg?imageView2/2/w/800" width="230px">
+      </a>
+    </li>
+  </ul>
+
+
+
     <div class="links-of-blogroll-title">
-      <h3 class="title" style="text-align:center;">3H增长曲线</h3>
+      <h3 class="title" style="text-align:center;background-color: lightskyblue">3H增长曲线</h3>
     </div>
     <ul class="links-of-blogroll-list">
       <li class="links-of-blogroll-item entry">
@@ -35,7 +58,7 @@
           </a>
         </li>
     </ul>
-    <div class="links-of-blogroll-title">
+  <!--  <div class="links-of-blogroll-title">
       <h3 class="title"><a href="http://limujiang.cc" target="_blank" title="换个角度看自己">狸木匠：关注程序员健康</a></h3>
     </div>
     <ul class="links-of-blogroll-list">
@@ -64,6 +87,5 @@
       			<img src="http://7u2qrr.com1.z0.glb.clouddn.com/IMG_0950.jpg?imageView2/2/w/800" width="230px">
       		</a>
         </li>
-
-    </ul>
+    </ul>-->
 </div>

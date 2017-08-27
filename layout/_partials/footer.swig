@@ -1,4 +1,5 @@
 <div class="copyright" >
+  京ICP备15010907号&nbsp;
   {% set current = date(Date.now(), "YYYY") %}
   &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
   <span itemprop="copyrightYear">{{ current }}</span>
