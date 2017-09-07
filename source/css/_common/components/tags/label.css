@@ -1,0 +1,23 @@
+.post-body .label {
+  display: inline;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+.post-body .label.default {
+  background-color: $label-default;
+}
+.post-body .label.primary {
+  background-color: $label-primary;
+}
+.post-body .label.info {
+  background-color: $label-info;
+}
+.post-body .label.success {
+  background-color: $label-success;
+}
+.post-body .label.warning {
+  background-color: $label-warning;
+}
+.post-body .label.danger {
+  background-color: $label-danger;
+}

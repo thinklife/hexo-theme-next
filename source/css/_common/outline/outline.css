@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+.container {
+  position: relative;
+  min-height: 100%;
+}
+.header-inner {
+  margin: 0 auto;
+  padding: 100px 0 70px;
+  width: $content-desktop;
+desktop-large()
+}
+.main-inner {
+  margin: 0 auto;
+  width: $content-desktop;
+desktop-large()
+}
+.footer {
+  width: 100%;
+  min-height: $footer-height;
+}
+.footer-inner {
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: $content-desktop;
+desktop-large()
+}
