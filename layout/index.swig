@@ -8,7 +8,7 @@
 
 <!-- page_class -->
 {% block page_class %}
-  {% if is_home() %} page-home {% endif %}
+  {% if is_home() %}page-home{% endif -%}
 {% endblock %}
 <!-- //end page_class-->
 

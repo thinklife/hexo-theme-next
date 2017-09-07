@@ -42,35 +42,24 @@ index_with_subtitle: true
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  categories: /categories/
-  #about: /about/
-  archives: /archives/
-  tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
-
+  home: / || home
+  #about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
-  home: home
-  about: user
-  categories: th
-  schedule: calendar
-  tags: tags
-  archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
-
-
 
 
 # ---------------------------------------------------------------
@@ -78,9 +67,177 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Pisces
+#scheme: Pisces
 #scheme: Mist
 #scheme: Pisces
+scheme: Gemini
+
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+# Social Links.
+# Usage: `Key: permalink || icon`
+# Key is the link label showing to end users.
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+#social:
+  GitHub: https://github.com/thinklife || github
+  E-Mail: mailto:55269778@qq.com || envelope
+  Google: https://plus.google.com/111414311568886709587 || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
+
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+
+# Blog rolls
+links_title: Links
+#links_layout: block
+links_layout: inline
+links:
+  #Title: http://example.com/
+  编程随想: http://program-think.blogspot.com/
+  知笔墨: http://zhibimo.com/
+  keyboard: http://www.typing-lessons.org
+  廖雪峰: http://www.liaoxuefeng.com/
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.gif
+# in site  directory(source/uploads): /uploads/avatar.gif
+avatar: http://7wy48o.com1.z0.glb.clouddn.com/2017-07-27-IMG_4410.jpg
+
+# Table Of Contents in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: true
+
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+#creative_commons:
+
+sidebar:
+  # Sidebar Position, available value: left | right
+  position: left
+  #position: right
+
+  # Sidebar Display, available value:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
+
+  # Sidebar offset from top menubar in pixels.
+  offset: 12
+  offset_float: 12
+
+  # Back to top in sidebar
+  b2t: true
+
+  # Scroll percent label in b2t button
+  scrollpercent: false
+
+  # Enable sidebar on narrow view
+  onmobile: false
+
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically saving scroll position on each post/page in cookies.
+save_scroll: true
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: false
+  categories: true
+
+# Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: false
+  wordcount: true
+  min2read: true
+  separated_meta: false
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #qcode: /uploads/wechat-qcode-hackhook.jpg
+  #description:  老婆+孩子=加油努力
+
+# Reward
+reward_comment: 多谢各位捧场!~
+wechatpay: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_qrcode_wechatpay.jpg
+#alipay: /images/alipay.jpg
+#bitcoin: /images/bitcoin.png
+
+# Declare license on posts
+post_copyright:
+  enable: false
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: false
+
+# Android Chrome header panel color ($black-deep).
+android_chrome_color: "#222"
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: true
+  image: http://7wy48o.com1.z0.glb.clouddn.com/avatar.png
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night bright
 
 
 # ---------------------------------------------------------------
@@ -130,169 +287,6 @@ font:
     size:
 
 
-
-
-# ---------------------------------------------------------------
-# Sidebar Settings
-# ---------------------------------------------------------------
-
-
-# Social Links
-# Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
-  GitHub: https://github.com/thinklife
-  Envelope: mailto:55269778@qq.com
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
-social_icons:
-  enable: true
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
-  Weixin: weixin
-  Envelope: envelope
-
-# Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
-#http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_wechat_avatar.png
-avatar: http://7wy48o.com1.z0.glb.clouddn.com/2017-07-27-IMG_4410.jpg
-
-
-# Table Of Contents in the Sidebar
-toc:
-  enable: true
-
-  # Automatically add list number to toc.
-  number: true
-
-  # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
-
-
-# Creative Commons 4.0 International License.
-# http://creativecommons.org/
-# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons: by-nc-sa
-#creative_commons:
-
-
-sidebar:
-  # Sidebar Position, available value: left | right
-  position: left
-  #position: right
-
-  # Sidebar Display, available value:
-  #  - post    expand on posts automatically. Default.
-  #  - always  expand for all pages automatically
-  #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
-  #display: hide
-  #display: remove
-
-  # Sidebar offset from top menubar in pixels.
-  offset: 20
-  offset_float: 0
-
-  # Back to top in sidebar
-  b2t: true
-
-  # Scroll percent label in b2t button
-  scrollpercent: false
-
-
-# Blog rolls
-links_title: Links
-#links_layout: block
-links_layout: inline
-#links:
-  #Title: http://example.com/
-links:
-  编程随想: http://program-think.blogspot.com/
-  知笔墨: http://zhibimo.com/
-  keyboard: http://www.typing-lessons.org
-  廖雪峰: http://www.liaoxuefeng.com/
-
-# ---------------------------------------------------------------
-# Post Settings
-# ---------------------------------------------------------------
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-# Automatically saving scroll position on each post/page in cookies.
-save_scroll: true
-
-# Automatically excerpt description in homepage as preamble text.
-excerpt_description: false
-
-# Automatically Excerpt. Not recommend.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-# Post meta display settings
-post_meta:
-  item_text: false
-  created_at: true
-  updated_at: false
-  categories: true
-
-# Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: false
-  wordcount: true
-  min2read: true
-  separated_meta: false
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #qcode: /uploads/wechat-qcode-hackhook.jpg
-  #description:  老婆+孩子=加油努力
-
-wechatpay: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_qrcode_wechatpay.jpg
-
-# iepple.desktopservices DSDontWriteNetworkStores trueclare license on posts
-post_copyright:
-  enable: false
-  license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
-
-
-
-# ---------------------------------------------------------------
-# Misc Theme Settings
-# ---------------------------------------------------------------
-
-# Custom Logo.
-# !!Only available for Default Scheme currently.
-# Options:
-#   enabled: [true/false] - Replace with specific image
-#   image: url-of-image   - Images's url
-custom_logo:
-  enabled: true
-  image: http://7wy48o.com1.z0.glb.clouddn.com/avatar.png
-
-
-# Code Highlight theme
-# Available value:
-#    normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
-
-
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -325,10 +319,22 @@ disqus:
 #hypercomments_id:
 
 # changyan
-# changyan:
-#  enable: false
-#  appid: cyt6osK9t
-#  appkey: 1a1ad0163fd4d903a488aecb741225c5
+changyan:
+  enable: false
+  appid:
+  appkey:
+
+
+# Valine.
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://github.com/xCss/Valine
+valine:
+  enable: false
+  appid:  # your leancloud application appid
+  appkey:  # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Comment input placeholder
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -346,12 +352,15 @@ disqus:
 ##  type: button
 
 # Share
-#jiathis:
+# This plugin is more useful in China, make sure you known how to use it.
+# And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
+#jiathis:
+  ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
 # Share
-duoshuo_share: f
+#duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -359,6 +368,10 @@ duoshuo_share: f
 
 # Google Analytics
 google_analytics: UA-67162812-1
+
+# Bing Webmaster tools verification setting
+# See: https://www.bing.com/webmaster/
+#bing_site_verification:
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -381,6 +394,7 @@ duoshuo_info:
   #admin_nickname: Author
 
 
+
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
@@ -394,7 +408,7 @@ facebook_sdk:
 # This plugin depends on Facebook SDK.
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
-  enable: true
+  enable: false
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
@@ -433,11 +447,11 @@ busuanzi_count:
   site_uv_header: <i class="fa fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
-  site_pv: false
+  site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
-  page_pv: false
+  page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
@@ -479,8 +493,8 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
 # Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: false
   # if auto, trigger search by changing input
@@ -489,10 +503,40 @@ local_search:
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
-# External URL with BASE64 encrypt & decrypt
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
+
+# External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
 exturl: true
+
+# Note tag (bs-callout).
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Label tag.
+label: true
+
+# Tabs tag.
+tabs:
+  enable: true
+  transition:
+    tabs: false
+    labels: true
+  border_radius: 0
 
 
 #! ---------------------------------------------------------------
@@ -501,7 +545,21 @@ exturl: true
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+motion:
+  enable: true
+  async: false
+  transition:
+    # Transition variants:
+    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
+    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
+    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
+    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
+    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
+    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
 
 # Fancybox
 fancybox: false
@@ -631,4 +689,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.1
+version: 5.1.2
