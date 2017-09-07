@@ -82,7 +82,7 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
+social:
   GitHub: https://github.com/thinklife || github
   E-Mail: mailto:55269778@qq.com || envelope
   Google: https://plus.google.com/111414311568886709587 || google
@@ -90,7 +90,7 @@ scheme: Gemini
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  YouTube: https://youtube.com/yourname || youtube
+  YouTube: https://www.youtube.com/channel/UC0CznEuvmTeWQzFCWQBclOw/undefined || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
 
@@ -176,12 +176,12 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 200
 
 # Post meta display settings
 post_meta:
-  item_text: true
+  item_text: false
   created_at: true
   updated_at: false
   categories: true
@@ -310,19 +310,19 @@ baidu_analytics: 9164ba92abdd8c94053ab08187ec9906
 #duoshuo_shortname:
 
 # Disqus
-disqus:
-  enable: true
-  shortname: www-hackhook-com
-  count: true
+# disqus:
+#  enable: true
+#  shortname: www-hackhook-com
+#  count: true
 
 # Hypercomments
 #hypercomments_id:
 
 # changyan
-changyan:
-  enable: false
-  appid:
-  appkey:
+#changyan:
+#  enable: true
+#  appid:  cyt6osK9t
+#  appkey: 1a1ad0163fd4d903a488aecb741225c5
 
 
 # Valine.
@@ -342,7 +342,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zMDcxNi83Mjcw
 
 # Baidu Share
 # Available value:
